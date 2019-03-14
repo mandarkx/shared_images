@@ -1,0 +1,18 @@
+if(plantTrack.info.loadNumber)
+    {
+        myPDFPage.savePDF(`${reportType} plot ${plantTrack.info.projectArea}_${plantTrack.info.plantName}_${plantTrack.info.loadNumber}.pdf`);
+    }
+    else{
+        myPDFPage.savePDF(`${reportType} plot ${plantTrack.info.projectArea}_${plantTrack.info.plantName}_${plantTrack.info.cycleNumber}.pdf`);    
+    }
+
+
+function toProperCase(str) {
+        return str.replace(
+            /\w\S*/g,
+            function(txt) {
+                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            }
+        );
+    }
+
